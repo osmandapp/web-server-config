@@ -36,7 +36,7 @@
 				</div>
 
 			<h3>Download servers:</h3>
-			<span>You can change it by modifying json file at <a href="https://github.com/osmandapp/osmandapp.github.io/blob/master/website/api/settings.json">Github</a> and don't forget to click button reload configuration.</span>
+			<span>You can change it by modifying json file at <a href="https://github.com/osmandapp/web-server-config/blob/main/api/download_settings.json">Github</a> and don't forget to click button reload configuration.</span>
 			<th:block th:each="region: ${downloadServers.regions}">
 				<p>
 				<table border="1">
@@ -63,7 +63,7 @@
   		<div id="motd" class="tab-pane fade">
 			<h3>Push / promo (message of the day)</h3>
 
-			<span>You can change it by modifying json file at <a href="https://github.com/osmandapp/osmandapp.github.io/blob/master/website/api/messages/motd_config.json">Github</a> and don't forget to click button reload configuration. The documentation of configuration is present at <a href="https://github.com/osmandapp/osmandapp.github.io/blob/master/website/api/messages/Readme.md">Readme</a></span>
+			<span>You can change it by modifying json file at <a href="https://github.com/osmandapp/web-server-config/blob/main/api/messages/_config.json">Github</a> and don't forget to click button reload configuration. The documentation of configuration is present at <a href="https://github.com/osmandapp/web-server-config/blob/main/api/messages/Readme.md">Readme</a></span>
 			<table border="1">
 				<tr>
 					<th>Active</th>
@@ -73,7 +73,7 @@
 				</tr>
 				<tr th:each="di : ${motdSettings.getDiscountSettings()}">
 					<td th:text="${di.discountCondition.checkActiveDate(new java.util.Date()) ? 'yes' : 'no'}"></td>
-					<td><a  th:text="${di.file}" th:href="'https://github.com/osmandapp/osmandapp.github.io/blob/master/website/api/messages/' + ${di.file}"></a></td>
+					<td><a  th:text="${di.file}" th:href="'https://github.com/osmandapp/web-server-config/blob/main/api/messages/' + ${di.file}"></a></td>
 					<td th:text="${di.discountCondition.getFilterCondition()}"></td>
 					<td th:text="${di.fields}"></td>
 				</tr>
@@ -82,7 +82,7 @@
 
 		<div id="subs" class="tab-pane fade">
 			<h3>Current subscriptions config</h3>
-			<span>You can change it by modifying json file at <a href="https://github.com/osmandapp/osmandapp.github.io/blob/master/website/api/subscriptions/config.json">Github</a> and don't forget to click button reload 	configuration.</span>
+			<span>You can change it by modifying json file at <a href="https://github.com/osmandapp/web-server-config/blob/main/api/subscriptions/_config.json">Github</a> and don't forget to click button reload 	configuration.</span>
 			<table border="1">
 				<tr>
 					<th>Active</th>
@@ -91,7 +91,7 @@
 				</tr>
 				<tr th:each="di : ${subSettings.getDiscountSettings()}">
 					<td th:text="${di.discountCondition.checkActiveDate(new java.util.Date()) ? 'yes' : 'no'}"></td>
-					<td><a  th:text="${di.file}" th:href="'https://github.com/osmandapp/osmandapp.github.	io/blob/master/website/api/subscriptions/' + ${di.file}"></a></td>
+					<td><a  th:text="${di.file}" th:href="'https://github.com/osmandapp/web-server-config/blob/main/api/subscriptions/' + ${di.file}"></a></td>
 					<td th:text="${di.discountCondition.getFilterCondition()}"></td>
 				</tr>
 			</table>
@@ -330,7 +330,7 @@
 
 		<div id="audience" class="tab-pane fade">
 			<h3>Audience surveys (polls)</h3>
-			<span>You can change it by modifying json file at <a href="https://github.com/osmandapp/osmandapp.github.io/blob/master/website/api/poll.json">Github</a> and don't forget to click button reload configuration. </span>
+			<span>You can change it by modifying json file at <a href="https://github.com/osmandapp/web-server-config/blob/main/api/poll.json">Github</a> and don't forget to click button reload configuration. </span>
 			<table border="1">
 				<tr>
 					<th>Channel</th>
@@ -349,7 +349,7 @@
 			</table>
 
 			<h3>Email database</h3>
-			<span>You can use automated tool to send emails to the database <a href="https://builder.osmand.net:8080/view/WebSite/job/Website_SendMail/">Send Emails</a>.</span>
+			<span>You can use automated tool to send emails to the database <a href="https://creator.osmand.net:8080/view/WebSite/job/Website_SendMail/">Send Emails</a>.</span>
 			<table border="1">
 				<tr>
 					<th>Category name</th>
