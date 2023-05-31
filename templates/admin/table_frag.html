@@ -8,7 +8,8 @@
     <div th:fragment="index_table (index_list, table_title)">
         
         <details>
-            <summary><h1 th:text="${table_title} + ' ' + ${index_list.size()} + ' Maps'"></h1></summary>
+            <summary th:text="${table_title} + ' ' + ${index_list == null ? 0 : index_list.size()} + ' Maps'" />
+            
 
             <table border="1">
                 <tr>
@@ -21,10 +22,10 @@
                 </tr>
                 <tr th:each="index : ${index_list}">
                 <td>
-                    <a th:href="@{/download?(${index.getHttpParam()=yes},file=${index.name})}" th:text="${index.name}"></a>
+                    <a th:href="@{/download?(${index.getHttpParam()}=yes,file=${index.name})}" th:text="${index.name}"></a>
                 </td>
-                <td th:text="${index.date}}"></td>
-                <td th:text="${index.getTime()}}"></td>
+                <td th:text="${index.getDate}"></td>
+                <td th:text="${index.getTime()}"></td>
                 <td th:text="${index.size}"></td>
                 <td th:text="${index.targetsize}"></td>
                 <td th:text="${index.description}"></td>
