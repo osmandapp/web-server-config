@@ -6,19 +6,32 @@
 </head>
 <body>
     <div th:fragment="index_table (index_list, table_title)">
-        <h1 th:text="${table_title} + ' ' + ${index_list.size()} + ' Maps'" ></h1>
-        <table border="1">
-            <tr th:each="index : ${index_list}">
+        
+        <details>
+            <summary><h1 th:text="${table_title} + ' ' + ${index_list.size()} + ' Maps'"></h1></summary>
+
+            <table border="1">
+                <tr>
+                    <th>Name</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Zip Size</th>
+                    <th>Size</th>
+                    <th>Description</th>
+                </tr>
+                <tr th:each="index : ${index_list}">
                 <td>
-                    <a th:href="@{/download?(${index.getHttpParam()=yes})(file=${index.name})}" th:text="${index.name}"></a>
+                    <a th:href="@{/download?(${index.getHttpParam()=yes},file=${index.name})}" th:text="${index.name}"></a>
                 </td>
-                <td th:text="${index.date} + ' ' + ${index.getTime()}"></td>
+                <td th:text="${index.date}}"></td>
+                <td th:text="${index.getTime()}}"></td>
                 <td th:text="${index.size}"></td>
                 <td th:text="${index.targetsize}"></td>
                 <td th:text="${index.description}"></td>
-            </tr>
-        </table>
+                </tr>
+            </table>
 
+        </details>
     </div>
 </body>
 </html>
