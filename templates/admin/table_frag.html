@@ -9,8 +9,10 @@
         <h1 th:text="${table_title}"></h1>
         <table border="1">
             <tr th:each="index : ${index_list}">
-                <td th:text="${index.name}"></td>
-                <td th:text="${index.date}"></td>
+                <td th:text="${index.name}">
+                    <a th:href="@{/download?(${index.getHttpParam()=yes})(file=${index.name})}" th:text="${index.name}"></a>
+                </td>
+                <td th:text="${index.date} + ' ' + ${index.getTime()}"></td>
                 <td th:text="${index.size}"></td>
                 <td th:text="${index.targetsize}"></td>
                 <td th:text="${index.description}"></td>
