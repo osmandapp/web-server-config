@@ -6,10 +6,10 @@
 </head>
 <body>
     <div th:fragment="index_table (index_list, table_title)">
-        <h1 th:text="${table_title}"></h1>
+        <h1 th:text="${table_title} + ' ' + index_list.size() + ' Maps'" ></h1>
         <table border="1">
             <tr th:each="index : ${index_list}">
-                <td th:text="${index.name}">
+                <td>
                     <a th:href="@{/download?(${index.getHttpParam()=yes})(file=${index.name})}" th:text="${index.name}"></a>
                 </td>
                 <td th:text="${index.date} + ' ' + ${index.getTime()}"></td>
