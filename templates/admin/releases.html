@@ -15,10 +15,11 @@
             <th>Size</th>
         </tr>
         <tr th:each="index : ${releases}">
+            <td th:text="${index.date}"></td>
+            <td th:text="${index.version}"></td>
             <td>
                 <a th:href="@{/admin/download-release?(file=${index.name})}" th:text="${index.name}"></a>
             </td>
-            <td th:text="${index.date}"></td>
             <td th:text="${index.size}"></td>
         </tr>
     </table>
