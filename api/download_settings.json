@@ -11,6 +11,8 @@
 		"heightmap" : { "dl2.osmand.net":1,  "dl4.osmand.net":1, "maptile.osmand.net":1}
 	},
 	"freemaps": {
+	},
+	"freemaps_example": {
 			"message": "We hope rescue operations will help as many people as possible in Turkey & Syria and we provide all maps free of charge.",
 			"namepatterns": [
 				"Turkey_",
