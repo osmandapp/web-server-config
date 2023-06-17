@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Releases</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+    <h1>Releases</h1>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Size</th>
+        </tr>
+        <tr th:each="index : ${releases}">
+            <td>
+                <a th:href="@{/admin/download-release?(file=${index.name})}" th:text="${index.name}"></a>
+            </td>
+            <td th:text="${index.date}"></td>
+            <td th:text="${index.size}"></td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
