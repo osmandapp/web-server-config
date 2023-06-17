@@ -9,7 +9,7 @@
 		"slope" : {"dl2.osmand.net":1, "dl3.osmand.net":1 , "dl4.osmand.net":1, "maptile.osmand.net":1},
 		"srtm" : { "dl2.osmand.net":1, "dl4.osmand.net":1, "maptile.osmand.net":1},
 		"heightmap" : { "dl2.osmand.net":1,  "dl4.osmand.net":1, "maptile.osmand.net":1},
-		"weather" : { "dl2.osmand.net":1,  "dl4.osmand.net":1, "maptile.osmand.net":1}
+		"weather" : { "dl2.osmand.net":1,  "dl3.osmand.net":1, "dl4.osmand.net":1}
 	},
 	"freemaps": {
 	},
